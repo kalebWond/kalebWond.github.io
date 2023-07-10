@@ -1,0 +1,39 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: tomato;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+p::first-letter {
+    font-size: 2.5em;
+    float: left;
+}
+
+.high-span {
+    font-weight: 700;
+    color: aqua;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.under-boxed {
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
