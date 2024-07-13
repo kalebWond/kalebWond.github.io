@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout with Flexbox</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .header,
+      .footer {
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+      .header {
+        background-color: #add8e6;
+      }
+
+      .footer {
+        background-color: #2f4f4f;
+      }
+
+      .menu-container {
+        background-color: #2f4f4f;
+        display: flex;
+      }
+
+      .menu-item {
+        padding: 10px 20px;
+        color: white;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        height: 60vh;
+      }
+
+      .column {
+        flex: 1;
+        padding: 15px;
+      }
+
+      .column--1 {
+        background-color: #aaa;
+      }
+
+      .column--2 {
+        background-color: #bbb;
+      }
+
+      .column--3 {
+        background-color: #cccccc;
+        order: 1;
+      }
+
+      @media (max-width: 600px) {
+        .column--3 {
+          order: 0;
+        }
+        .column--2 {
+            flex: 0 0 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Header</h1>
+      </div>
+
+      <div class="menu-container">
+        <div class="menu-item">Menu 1</div>
+        <div class="menu-item">Menu 2</div>
+        <div class="menu-item">Menu 3</div>
+      </div>
+
+      <div class="content">
+        <div class="column column--1">
+          <p>Column 1</p>
+        </div>
+        <div class="column column--3">
+          <p>Column 3</p>
+        </div>
+        <div class="column column--2">
+          <p>Column 2</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Footer</p>
+      </div>
+    </div>
+  </body>
+</html>
