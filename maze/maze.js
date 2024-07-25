@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  console.log("jquery ready");
   var gameStarted = false;
   $("#maze .boundary").mouseover(function () {
     if (gameStarted) {
