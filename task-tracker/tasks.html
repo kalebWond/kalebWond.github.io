@@ -94,7 +94,7 @@
         .append("<span>*</span>")
         .children("span")
         .addClass("required");
-        
+
       $("tbody tr:even").addClass("even");
 
       $("#btnAddTask").click(function (evt) {
@@ -118,12 +118,22 @@
         evt.preventDefault();
         var task = $("form").toObject();
         $("#taskRow").tmpl(task).appendTo($("#tblTasks tbody"));
+        clearTask();
       });
 
       $("#printObject").click(function (evt) {
         evt.preventDefault();
         var task = $("form").toObject();
         console.log(JSON.stringify(task));
+      });
+
+      function clearTask() {
+        $("form").fromObject({});
+      }
+
+      $("#clearTask").click(function (evt) {
+        evt.preventDefault();
+        clearTask();
       });
 
       $("#loadObject").click(function (evt) {
