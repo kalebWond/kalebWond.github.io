@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Posts SPA</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #user-info,
+      #user-posts {
+        margin-top: 20px;
+      }
+      .post {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 10px;
+      }
+      .comments {
+        display: none;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Posts Application</h1>
+
+    <form id="user-form">
+      <label for="userId">Enter User ID:</label>
+      <input type="text" id="userId" name="userId" required />
+      <button type="submit">Get User Info</button>
+    </form>
+
+    <div id="user-info"></div>
+
+    <div id="user-posts"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
